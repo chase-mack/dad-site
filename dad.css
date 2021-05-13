@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.navbar {
+    font-family: 'Cormorant', serif;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: rgb(125, 65, 10);
+    opacity: .8;
+    height: 5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    margin-left: .6rem;
+}
+
+#company-name {
+    font-size: 1.75rem;
+}
+
+.links {
+    margin-right: .5rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 175);
+    margin: .5rem;
+}
+
+a:hover {
+    color:rgb(235, 235, 200);
+}
+
+.slideshow {
+    height: 40rem;
+    margin: 0;
+    background-image: url("images/dad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slideshow {
+    height: 40rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-nav {
+    display: flex;
+    height: 20rem;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-nav:hover {
+    background-color: rgb(255, 255, 175, .1);
+}
+
+.slide-button {
+    background: 0;
+    border: none;
+}
+
+#slideshow i {
+    font-size: 5rem;
+    color: rgb(125, 65, 10, .5);
+}
+
+.mission-statement {
+    height: 40rem;
+    display: flex;
+    margin: auto;
+    background-color: rgb(235, 235, 200);
+}
+
+#mission-statement {
+    width: 35rem;
+    margin: auto;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+    color: rgb(45, 25, 5);
+}
+
+#mission-statement>h1 {
+    font-size: 1.75rem;
+}
+
+#mission-statement>p {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.footer {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 175);
+}
+
+#contacts a {
+    color: rgb(45, 25, 5);
+    vertical-align: middle;
+}
+
+#contacts i {
+    font-size: 2rem;
+}
