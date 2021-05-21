@@ -9,17 +9,27 @@ body {
     margin: 0;
 }
 
+@media (max-width: 600px) {
+    .links #hamburger {
+        display: inline-block;
+        margin-right: .5rem;
+    }
+    .link-list {
+        display: none;
+    }
+}
+
 .navbar {
     font-family: 'Cormorant', serif;
     position: fixed;
     top: 0;
     display: flex;
-    background-color: rgb(125, 65, 10);
-    opacity: .8;
+    background-color: rgb(45, 25, 5, .8);
     height: 5rem;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
 }
 
 .navbar-brand {
@@ -34,7 +44,15 @@ body {
     margin-right: .5rem;
 }
 
-a {
+.links ul {
+    list-style-type: none;
+}
+
+.link-list li {
+    display: inline-block;
+}
+
+.navbar a {
     text-decoration: none;
     font-size: 1.2rem;
     color: rgb(255, 255, 175);
@@ -45,48 +63,140 @@ a:hover {
     color:rgb(235, 235, 200);
 }
 
+#hamburger {
+    display: none;
+}
+
+#hamburger button {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border-color: rgb(45, 25, 5);
+    background-color: rgb(255, 255, 175)
+}
+
+.drop-down {
+    display: none;
+    position: absolute;
+    background-color: rgb(45, 25, 5);
+    top: 0;
+    right: 0;
+    margin: 2rem 2rem;
+    height: 12rem;
+    width: 12rem;
+    z-index: 10;
+}
+
+.drop-down ul {
+    list-style-type: none;
+}
+
+.drop-down li {
+    padding: .7rem;
+}
+
 .slideshow {
     height: 40rem;
     margin: 0;
-    background-image: url("images/dad.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.slideshow::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: calc(100% + 62px);
+    background-color: rgb(45, 25, 5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+    z-index: 0;
 }
 
 #slideshow {
     height: 40rem;
     display: flex;
+    background-image: url("images/dad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     justify-content: space-between;
     align-items: center;
 }
 
-.arrow-nav {
+.nav-container {
     display: flex;
     height: 20rem;
     width: 20rem;
     justify-content: center;
     align-items: center;
+    z-index: 9;
 }
 
-.arrow-nav:hover {
+.nav-container:hover {
     background-color: rgb(255, 255, 175, .1);
+    z-index: 9;
 }
 
 .slide-button {
+    display: none;
     background: 0;
     border: none;
+    z-index: 9;
 }
 
 #slideshow i {
     font-size: 5rem;
     color: rgb(125, 65, 10, .5);
+    z-index: 9;
 }
+
+#adMessage {
+    display: flex;
+    flex-direction: column;
+    z-index: 9;
+    text-align: center;
+}
+
+#adMessage>h1 {
+    color: rgb(235, 235, 200);
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    justify-self: center;
+    align-self: center;
+    padding-bottom: 1.5rem;
+    z-index: 9;
+}
+
+#adMessage a {
+        display: block;
+        height: 2rem;
+        width: 10rem;
+        padding-top: .5rem;
+        font-family: 'Cormorant', serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        background-color: rgb(235, 235, 200);
+        color: rgb(45, 25, 5);
+        border: 1.5px solid rgb(45, 25, 5);
+        text-decoration: none;
+        margin: auto;
+        text-align: center;
+    }
+
+    #adMessage a:hover {
+        background-color: rgb(45, 25, 5);
+        color: rgb(235, 235, 200);
+    }
 
 .mission-statement {
     height: 40rem;
     display: flex;
-    margin: auto;
     background-color: rgb(235, 235, 200);
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
 }
 
 #mission-statement {
@@ -102,8 +212,140 @@ a:hover {
 }
 
 #mission-statement>p {
-    margin-top: 1rem;
+    padding: 1rem 0;
     text-align: center;
+}
+
+#news-link {
+    height: 2.5rem;
+    width: 10rem;
+    padding: .5rem;
+    font-family: 'Cormorant', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: rgb(235, 235, 200);
+    color: rgb(45, 25, 5);
+    border: 1.5px solid rgb(45, 25, 5);
+    text-decoration: none;
+}
+
+#news-link:hover {
+    text-decoration: none;
+    background-color: rgb(45, 25, 5);
+    color: rgb(235, 235, 200);
+}
+
+.banner {
+    height: 18rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/dad2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Cormorant', serif;
+    font-size: 1.5rem;
+    color: rgb(235, 235, 200);
+    position: relative;
+}
+
+.banner::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(45, 25, 5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    z-index: 0;
+}
+
+.banner>h1 {
+    margin-bottom: .5rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    opacity: 1;
+    z-index: 9;
+}
+
+.banner>p {
+    z-index: 9;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+}
+
+#pageBreak {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(45, 25, 5, 0.75), rgba(0, 0, 0, 0));
+}
+
+#availabilityMessage {
+    display: flex;
+    height: 11rem;
+    width: 60%;
+    font-size: .8rem;
+    color: rgb(45, 25, 5);
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+#galleryHead {
+    margin-top: 2rem;
+    color: rgb(45, 25, 5);
+    margin-bottom: 2.5rem;
+    font-size: 1.75rem;
+}
+
+#photoGrid {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 325px;
+    width: 249px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cardPhoto {
+    height: 250px;
+}
+
+.cardPhoto img {
+    height: 100%;
+    max-width: 100%;
+}
+
+.cardInfo {
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 235, 200);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
 }
 
 .footer {
@@ -111,7 +353,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 175);
+    background-color: rgba(125, 65, 10, .9);
 }
 
 #contacts a {

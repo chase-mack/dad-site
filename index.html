@@ -11,38 +11,60 @@
 </head>
 
 <body>
-    <section id="navbar">
+    <header id="navbar">
         <nav class="navbar">
             <div class="navbar-brand">
                 <a class="logo" id="company-name" href="#">Neal Mack Carpentry</a>
             </div>
             <div class="links">
-                <a href="#">Home</a>
-                <a href="#">Gallery</a>
-                <a href="#">About Us</a>
-                <a href="#">Shop</a>
+                <ul class="link-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+                <span id="hamburger"><button onclick="openDrawer()"><i class="fas fa-bars"></i></button></span>
+            </div>
+            <div class="drop-down">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
             </div>
         </nav>
-    </section>
-    <section class="slideshow">
-        <div id="slideshow">
-            <div id="arrow-left" class="arrow-nav">
-                <button class="slide-button" id="btn-left"><i class="fas fa-chevron-left"></i></button>
+    </header>
+    <main>
+        <section class="slideshow">
+            <div id="slideshow">
+                <div id="arrow-left" class="nav-container">
+                    <button class="slide-button" id="btn-left"><i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div id="adMessage">
+                    <h1>This is where the ad message will be!</h1>
+                    <a href="gallery.html">Gallery</a>
+                </div>
+                <div id="arrow-right" class="nav-container">
+                    <button class="slide-button" id="btn-right"><i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
-            <div id="arrow-right" class="arrow-nav">
-                <button class="slide-button" id="btn-right"><i class="fas fa-chevron-right"></i></button>
+        </section>
+        <section class="mission-statement">
+            <div id="mission-statement">
+                <h2>This is where I will write the shit about dad's work.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam impedit ducimus ipsa maiores
+                        cupiditate
+                        similique voluptatibus eos harum corporis animi quam tempora doloribus aperiam debitis, tempore
+                        ea
+                        neque. Asperiores, aspernatur.</p>
+                    <p><a href="#" id="news-link">Get the Newsletter</a></p>
             </div>
-        </div>
-    </section>
-    <section class="mission-statement">
-        <div id="mission-statement">
-            <h1>This is where I will write the shit about dad's work.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam impedit ducimus ipsa maiores cupiditate
-                similique voluptatibus eos harum corporis animi quam tempora doloribus aperiam debitis, tempore ea
-                neque. Asperiores, aspernatur.</p>
-        </div>
-    </section>
-    <section class="footer">
+        </section>
+    </main>
+    <footer class="footer">
         <div id="contacts">
             <span>Contact Us:</span>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -50,9 +72,9 @@
             <a href="#"><i class="far fa-envelope"></i></a></a>
             <a href="#"><i class="fab fa-facebook-square"></i></a>
         </div>
-    </section>
+    </footer>
 
-    <script src="dad.js"></script>
+    <script src="dad-site.js"></script>
     <script src="https://kit.fontawesome.com/682b85aa9e.js" crossorigin="anonymous"></script>
 </body>
 
