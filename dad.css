@@ -103,7 +103,7 @@ a:hover {
 }
 
 .slideshow {
-    height: 40rem;
+    height: 100vh;
     margin: 0;
 }
 
@@ -111,7 +111,7 @@ a:hover {
     content: "";
     display: block;
     width: 100%;
-    height: calc(100% + 62px);
+    height: 100vh;
     background-color: rgb(45, 25, 5);
     position: absolute;
     top: 0;
@@ -121,7 +121,7 @@ a:hover {
 }
 
 #gallery-slide {
-    height: 40rem;
+    height: 100vh;
     display: none;
     background-image: url("images/dad.jpg");
     background-size: cover;
@@ -131,7 +131,7 @@ a:hover {
 }
 
 #about-slide {
-    height: 40rem;
+    height: 100vh;
     display: none;
     background-image: url("images/dad2.jpg");
     background-size: cover;
@@ -141,7 +141,7 @@ a:hover {
 }
 
 #shop-slide {
-    height: 40rem;
+    height: 100vh;
     display: none;
     background-image: url("images/dad3.jpg");
     background-size: cover;
@@ -248,7 +248,7 @@ a:hover {
     }
 
 .mission-statement {
-    height: 40rem;
+    height: 100vh;
     display: flex;
     background-color: rgb(235, 235, 200);
     justify-content: center;
