@@ -293,7 +293,7 @@ a:hover {
 }
 
 .banner {
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -351,7 +351,7 @@ a:hover {
 
 #availabilityMessage {
     display: flex;
-    height: 60vh;
+    height: 50vh;
     width: 60%;
     font-size: .8rem;
     color: rgb(45, 25, 5);
